@@ -3,7 +3,7 @@
  * All right reserved.
  * Created on 2009-12-17 by Ryan.
  */
-package net.caiban.utils.lang;
+package net.caiban.common.utils.lang;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

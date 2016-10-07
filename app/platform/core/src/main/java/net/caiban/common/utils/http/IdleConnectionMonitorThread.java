@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net.caiban.utils.http;
+package net.caiban.common.utils.http;
 
 import java.util.concurrent.TimeUnit;
 

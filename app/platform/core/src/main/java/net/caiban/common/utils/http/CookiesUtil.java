@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net.caiban.utils.http;
+package net.caiban.common.utils.http;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

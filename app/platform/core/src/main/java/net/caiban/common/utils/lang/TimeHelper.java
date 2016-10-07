@@ -3,7 +3,7 @@
  * All right reserved.
  * Created on 2011-3-25
  */
-package net.caiban.utils.lang;
+package net.caiban.common.utils.lang;
 
 
 /**

@@ -5,7 +5,7 @@
  * <p>
  * Copyright (c) 2017 Mar(mays@caiban.net)
  */
-package net.caiban.common;
+package net.caiban.common.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

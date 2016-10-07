@@ -1,4 +1,4 @@
-package net.caiban.utils.file;
+package net.caiban.common.utils.file;
 
 import java.io.File;
 import java.io.FileInputStream;

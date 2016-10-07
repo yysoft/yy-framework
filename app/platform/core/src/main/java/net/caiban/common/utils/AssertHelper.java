@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net.caiban.utils;
+package net.caiban.common.utils;
 
 /**
  * @author mays

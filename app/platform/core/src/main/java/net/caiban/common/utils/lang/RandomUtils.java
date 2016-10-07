@@ -1,4 +1,4 @@
-package net.caiban.utils.lang;
+package net.caiban.common.utils.lang;
 
 import java.util.HashSet;
 import java.util.Random;

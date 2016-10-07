@@ -1,4 +1,4 @@
-package net.caiban.utils.exception;
+package net.caiban.common.utils.exception;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

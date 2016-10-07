@@ -1,4 +1,4 @@
-package net.caiban.utils.lang;
+package net.caiban.common.utils.lang;
 
 public class GB2Alpha {
 

@@ -8,19 +8,37 @@
 package net.caiban.platform.common.enums;
 
 /**
+ * 日志枚举
  * Created by mar on 2016/10/7.
  */
-public enum BooleanEnum implements BaseEnum {
+public enum LoggerEnum implements BaseEnum {
 
     /**
-     * true
+     * 接口集成层日志
      */
-    TRUE("T", "true"),
+    INTERGRATION("net.caiban.common.intergration", "接口集成层日志"),
 
     /**
-     * false
+     * 服务层日志
      */
-    FALE("F", "false");
+    BIZ_SERVICE("net.caiban.biz.service", "服务层日志"),
+
+    /**
+     * 任务层日志
+     */
+    BIZ_TASK("net.caiban.biz.task", "任务层日志"),
+
+    /**
+     * 核心业务层日志
+     */
+    CORE_SERVICE("net.caiban.core.service","核心业务层日志"),
+
+    /**
+     * 通用错误日志
+     */
+    COMMON_ERROR("net.caiban.common.error", "通用错误日志");
+
+    ;
 
     /**
      * CODE值
@@ -36,7 +54,7 @@ public enum BooleanEnum implements BaseEnum {
      * @param code
      * @param message
      */
-    private BooleanEnum(String code, String message) {
+    private LoggerEnum(String code, String message) {
         this.code = code;
         this.message = message;
     }
@@ -47,8 +65,8 @@ public enum BooleanEnum implements BaseEnum {
      * @param b
      * @return
      */
-    public BooleanEnum nameOf(String b) {
-        for (BooleanEnum be : BooleanEnum.values()) {
+    public LoggerEnum nameOf(String b) {
+        for (LoggerEnum be : LoggerEnum.values()) {
             if (be.name().equals(b)) {
                 return be;
             }

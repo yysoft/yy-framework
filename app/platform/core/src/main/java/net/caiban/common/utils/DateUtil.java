@@ -1,4 +1,4 @@
-package net.caiban.utils;
+package net.caiban.common.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
