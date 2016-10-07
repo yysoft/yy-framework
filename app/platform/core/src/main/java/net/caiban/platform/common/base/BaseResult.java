@@ -12,15 +12,16 @@ package net.caiban.platform.common.base;
  */
 public class BaseResult extends ToString {
 
+    private static final long    serialVersionUID = -3411798478617194773L;
+    /**
+     * 成功状态
+     */
+    private              boolean success          = false;
+
     /**
      * 消息码
      */
     private String code;
-
-    /**
-     * 成功状态
-     */
-    private boolean success = false;
 
     /**
      * 消息

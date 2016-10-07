@@ -19,6 +19,8 @@ import java.io.Serializable;
  */
 public class ToString implements Serializable{
 
+    private static final long serialVersionUID = 1333680580721443769L;
+
     @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
