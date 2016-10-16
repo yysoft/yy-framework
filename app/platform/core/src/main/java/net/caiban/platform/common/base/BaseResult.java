@@ -7,6 +7,8 @@
  */
 package net.caiban.platform.common.base;
 
+import net.caiban.platform.common.enums.BaseResultCodeEnum;
+
 /**
  * Created by mar on 2016/10/3.
  */
@@ -22,11 +24,25 @@ public class BaseResult extends ToString {
      * 消息码
      */
     private String code;
-
     /**
      * 消息
      */
     private String message;
+
+    /**
+     * construct
+     * @param success
+     */
+    public BaseResult(boolean success) {
+        this.success = success;
+        if (success) {
+            this.code = BaseResultCodeEnum.SUCCESS.getCode();
+            this.message = BaseResultCodeEnum.SUCCESS.getMessage();
+        } else {
+            this.code = BaseResultCodeEnum.SYSTEM_ERROR.getCode();
+            this.message = BaseResultCodeEnum.SYSTEM_ERROR.getMessage();
+        }
+    }
 
     /**
      * Getter method for property <tt>code</tt>.

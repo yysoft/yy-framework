@@ -4,7 +4,6 @@
 package net.caiban.common.utils.http;
 
 import com.google.common.base.Strings;
-import net.caiban.utils.http.IdleConnectionMonitorThread;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;

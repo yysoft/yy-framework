@@ -23,6 +23,15 @@ public class BaseQueryResult<T> extends BaseResult {
     private List<T> list;
 
     /**
+     * construct
+     *
+     * @param success
+     */
+    public BaseQueryResult(boolean success) {
+        super(success);
+    }
+
+    /**
      * Getter method for property <tt>list</tt>.
      *
      * @return property value of list

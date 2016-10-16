@@ -43,6 +43,16 @@ public class BasePageResult<T> extends BaseResult {
     private int currentPage = 1;
 
     /**
+     * construct
+     *
+     * @param success
+     */
+    public BasePageResult(boolean success) {
+        super(success);
+    }
+
+
+    /**
      * Getter method for property <tt>list</tt>.
      *
      * @return property value of list

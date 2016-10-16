@@ -25,4 +25,9 @@ public class BaseRuntimeException extends RuntimeException {
         super(message);
         LOG_ALT.error(message);
     }
+
+    public BaseRuntimeException(String message, Throwable e) {
+        super(message, e);
+        LOG_ALT.error(message, e);
+    }
 }
