@@ -20,7 +20,7 @@ public class BaseQueryResult<T> extends BaseResult {
     /**
      * 查询结果集
      */
-    private List<T> list;
+    private T obj;
 
     /**
      * construct
@@ -32,20 +32,20 @@ public class BaseQueryResult<T> extends BaseResult {
     }
 
     /**
-     * Getter method for property <tt>list</tt>.
+     * Getter method for property <tt>obj</tt>.
      *
-     * @return property value of list
+     * @return property value of obj
      */
-    public List<T> getList() {
-        return list;
+    public T getObj() {
+        return obj;
     }
 
     /**
-     * Setter method for property <tt>list</tt>.
+     * Setter method for property <tt>obj</tt>.
      *
-     * @param list value to be assigned to property list
+     * @param obj value to be assigned to property obj
      */
-    public void setList(List<T> list) {
-        this.list = list;
+    public void setObj(T obj) {
+        this.obj = obj;
     }
 }

@@ -7,8 +7,6 @@
  */
 package net.caiban.platform.common.enums;
 
-import java.util.zip.CheckedInputStream;
-
 /**
  * Created by mar on 2016/10/10.
  */
@@ -67,9 +65,7 @@ public enum BaseResultCodeEnum implements BaseEnum {
     /**
      * 交易金额不正确
      */
-    TRADE_MONEY_ERROR("TRADE_MONEY_ERROR", "交易金额不正确"),
-
-    ;
+    TRADE_MONEY_ERROR("TRADE_MONEY_ERROR", "交易金额不正确"),;
 
     /**
      * CODE值
@@ -106,24 +102,24 @@ public enum BaseResultCodeEnum implements BaseEnum {
     }
 
     /**
-    * @see BaseEnum#getMessage()
-    */
+     * @see BaseEnum#getMessage()
+     */
     @Override
     public String getMessage() {
         return this.message;
     }
 
     /**
-    * @see BaseEnum#getCode()
-    */
+     * @see BaseEnum#getCode()
+     */
     @Override
     public String getCode() {
         return this.code;
     }
 
     /**
-    * @see BaseEnum#getValue()
-    */
+     * @see BaseEnum#getValue()
+     */
     @Override
     public Integer getValue() {
         return null;

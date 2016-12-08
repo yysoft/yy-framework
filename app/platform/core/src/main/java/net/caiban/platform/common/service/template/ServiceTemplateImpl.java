@@ -18,7 +18,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 
 /**
  * 服务模板实现
- *
+ * <p>
  * Created by mar on 2016/10/10.
  */
 public class ServiceTemplateImpl implements ServiceTemplate {
@@ -38,10 +38,10 @@ public class ServiceTemplateImpl implements ServiceTemplate {
      */
     @Override
     public void execute(final BaseResult result, final ServiceCallback action) {
-        transactionTemplate.execute(new TransactionCallback() {
+        transactionTemplate.execute(new TransactionCallback<BaseResult>() {
 
             @Override
-            public Object doInTransaction(TransactionStatus status) {
+            public BaseResult doInTransaction(TransactionStatus status) {
                 try {
 
                     if (action instanceof ServiceCheckCallback) {
@@ -63,7 +63,8 @@ public class ServiceTemplateImpl implements ServiceTemplate {
                     result.setSuccess(false);
                     result.setMessage(be.getMessage());
                 } finally {
-                    LOG.info("业务处理操作结果：", result);
+
+                    LOG.info("业务处理操作结果：" + result);
                 }
                 return result;
             }
@@ -76,10 +77,10 @@ public class ServiceTemplateImpl implements ServiceTemplate {
     @Override
     public void execute(final ServiceCallback action) {
         final BaseResult result = new BaseResult(true);
-        transactionTemplate.execute(new TransactionCallback() {
+        transactionTemplate.execute(new TransactionCallback<BaseResult>() {
 
             @Override
-            public Object doInTransaction(TransactionStatus status) {
+            public BaseResult doInTransaction(TransactionStatus status) {
                 try {
 
                     if (action instanceof ServiceCheckCallback) {
@@ -88,6 +89,7 @@ public class ServiceTemplateImpl implements ServiceTemplate {
 
                     {
                         action.executeService();
+                        transactionTemplate.getTransactionManager().commit(status);
                     }
 
                     if (result.isSuccess()) {
@@ -101,7 +103,7 @@ public class ServiceTemplateImpl implements ServiceTemplate {
                     result.setSuccess(false);
                     result.setMessage(be.getMessage());
                 } finally {
-                    LOG.info("业务处理操作结果：", result);
+                    LOG.info("业务处理操作结果：" + result);
                 }
                 return result;
             }
@@ -132,7 +134,7 @@ public class ServiceTemplateImpl implements ServiceTemplate {
             result.setSuccess(false);
             result.setMessage(be.getMessage());
         } finally {
-            LOG.info("业务处理操作结果：", result);
+            LOG.info("业务处理操作结果：" + result);
         }
     }
 
